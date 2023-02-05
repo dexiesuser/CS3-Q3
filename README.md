@@ -4,5 +4,5 @@
 <p> Quarter and SY: 3rd Semester, SY 2022-2023 </p> <br>
 <p> Grade and Section: 9 - Potassium </p> <hr>
 <ul>
-  <li> <a href = "https://dexiesuser.github.io/CS3-Q3/JS-Activity/nav.html"</a> </li>
+  <li> <a href = "https://dexiesuser.github.io/CS3-Q3/JS-Activity/nav.html"></a> </li>
 </ul>
