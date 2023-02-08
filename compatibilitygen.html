@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<p id="demo" style="color:red"></p>
+		<button onclick="f1()">Compute Compatibility</button>
+		<script>
+			function f1() {
+				var x = prompt("Enter first name:","");
+				var y = prompt("Enter second name:", "");
+				var compatible = (Math.random() * 100).toFixed(2);
+				document.getElementById("demo").innerHTML = x + " and " + y + " are " + compatible + "% compatible";
+				}
+		    /*function f1() {
+				var txt;
+				if(confirm('Press anything')) {
+					txt = "You clicked OK";
+				}
+				else {
+					txt = "You clicked Cancel";
+				}
+				document.getElementById("demo").innerHTML = txt;
+			}*/
+		</script>
+	</body>
+</html>
