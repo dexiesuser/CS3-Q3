@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			h1 {
+				text-align:center;
+			}
+			
+			#coin {
+				width: 100px;
+				height: 100px;
+				background-color: yellow;
+				border-radius:50px;
+				margin:auto;
+			}
+			
+			#player {
+				background-color: red;
+				width:50%;
+				float:left;
+				text-align:center;
+				color: white;
+			}
+			
+			#computer {
+				background-color: blue;
+				width:50%;
+				float:left;
+				text-align:center;
+				color: white;
+			}
+			
+			#scoring {
+				margin-top: 50px;
+			}
+			
+			#scoring p {
+				font-size: 100px;
+				margin-top: 20px;
+				margin-bottom: 20px;
+			}
+			
+			#button {
+				text-align: center;
+				margin-top: 20px;
+			}
+			
+			#random {
+				padding-top:35px;
+				text-align: center;
+				font-size: 30px;
+			}
+		</style>
+
+	</head>
+	<body>
+		<h1> FLIP-A-COIN </h1>
+		<div id="coin"><p id="random"></p> </div>
+		<div id="button">
+			<button onclick="flip()">FLIP A COIN</button>
+		</div>
+		<div id="scoring">
+			<div id="player">
+				<h2 id="playerName"></h2>
+				<p id="playerScore">0</p>
+			</div>
+			<div id="computer">
+				<h2>COMPUTER</h2>
+				<p id="computerScore">0</p>
+			</div>
+		</div>
+		
+		<script>
+			var playername = prompt(" Player Name: ");
+			document.getElementById("playerName").innerHTML = playername;
+			var pscore = 0;
+			var cscore = 0;
+			
+			function flip(){
+				var choice = confirm("Heads (OK), Tails (Cancel)");
+				var randomNum = Math.random()*100;
+				
+				if (randomNum>50){
+					document.getElementById("random").innerHTML = "heads";
+					if (choice==true){
+						pscore++;
+						document.getElementById("playerScore").innerHTML = pscore;
+					} else {
+						cscore++;
+						document.getElementById("computerScore").innerHTML = cscore;
+					}
+						
+
+				}
+				if (randomNum<50){
+					document.getElementById("random").innerHTML = "tails";	
+					if (choice==true){
+						cscore++;
+						document.getElementById("playerScore").innerHTML = cscore;
+					} else {
+						pscore++;
+						document.getElementById("computerScore").innerHTML = pscore;
+					}	
+					
+				}
+			
+			}
+			
+			
+			
+			
+			
+			
+		</script>
+	</body>
+</html>
