@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head></head>
+	<body>
+		<img id="demo" src="images/shoes.jpg" height="300px" width="300px">
+		<br>
+		<button onclick = "test()">Next image</button>
+		<button onclick = "test1()">Original image</button>
+		<script>
+			function test() {
+				document.getElementById("demo").src = "images/ocean.jpg";
+			}
+			
+			function test1() {
+				document.getElementById("demo").src = "images/shoes.jpg";
+			}
+		</script>
+	</body>
+</html>
