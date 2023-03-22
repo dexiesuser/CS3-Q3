@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Toss coin</title>
+		<meta charset="UTF-8">
+        <meta name="description" content="The website lets you flip an online coin and compare your guess with the result.">
+        <meta name="keywords" content="flip a coin, coinflip, coin, flip">
+        <meta name="author" content="Dexielyn Amor C. Halog">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+        	body {background: navy; 
+            	text-align: center;
+            	font-family: arial;
+                color: white;
+            }
+            button {padding: 10px; background:violet }
+            span {color: yellow}
+            #coin, h5 {color: yellow; }
+            #coin { background: gray; 
+            	width: 25px; 
+                height: 25px;
+                padding: 25px;          
+                border: 5px dashed darkgray;
+                border-radius: 50%;
+                margin: 0 auto;
+                
+            }
+            
+        </style>
+
+	</head>
+	<body onload="getGuess()">
+        <h1> Heads or Tail? </h1>
+        <h2 onclick="getGuess()"> Click here to change your Guess: <span id="guess"> </span></h2>
+        <h2 id="coin" onclick="cflip()"> H </span></h2>   
+        <h5> Click on the coin above to randomly change its face and compare with your guess </h5> 
+        <script>
+            /* This function gets the guess of the user for the result of the flipped coin */
+            var getGuess = function() {
+                uGuess = prompt("Type H for head and T for tail","H");
+                uGuess.toUpperCase; // converting to an uppercase letter
+                (uGuess != "H" && uGuess != "T") ?	alert("Wrong Input"):
+                    guess.innerHTML = uGuess;
+            }
+
+            /* Takes the computer's generated flipped coin result */
+            function cflip() {
+                var random = ((Math.random() * 100).toFixed(0))%2;
+                document.getElementById("coin").innerHTML = random;
+                /* This shows the result of the coin flip in the h2 element */
+                if(random == 0){
+					document.getElementById("coin").innerHTML = "H";
+            }
+                if (random == 1){
+				    document.getElementById("coin").innerHTML = "T";
+			}
+                /* This portion compares the guess of the user versus the actual result of the flipped coin */
+			    if (uGuess == "T" && random == 1 || uGuess == "H" && random == 0){
+				    alert("Tamacanna... sa guess mo! Correct guess :D");
+			}
+
+			    else {
+				    alert("Common L, wrong guess x)");
+			}
+        }
+        </script>
+	</body>
+</html>

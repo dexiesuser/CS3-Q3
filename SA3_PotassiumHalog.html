@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Choose Background Color</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="The website changes the overall background color with a click of a button.">
+    <meta name="keywords" content="background color, color, bg">
+    <meta name="author" content="Dexielyn Amor C. Halog">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: arial;
+        color: white;
+      }
+      body {
+        background: navy;
+      }
+      ul {
+        list-style-type: none;
+        width: 100px;
+        padding: 0;
+        border: 1px solid black;
+        background: gray;
+      }
+      li {
+        width: 100%;
+        border-bottom: 1px solid black;
+        padding: 5px;
+      }
+      li:nth-child(3) {
+        border: none;
+      }
+      a {
+        text-decoration: none;
+        display: block;
+        width: 100%;
+      }
+      li:nth-child(1):hover {
+        background: purple;
+      }
+      li:nth-child(2):hover {
+        background: navy;
+      }
+      li:nth-child(3):hover {
+        background: maroon;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Choose Background Color</h2>
+    <ul>
+      <li onclick="changeBgColor()"><a href="#" id="purple"> Purple </a></li>
+      <li onclick="changeBgColor()"><a href="#" id="navy"> Navy </a></li>
+      <li onclick="changeBgColor()"><a href="#" id="maroon"> Maroon </a></li>
+    </ul>
+
+    <script>
+      /* do not forget to include comments to this script */
+      // Function to change background color
+      function changeBgColor(color) {
+        document.body.style.backgroundColor = color;
+      }
+
+      // Onclick functions for the background color change
+      purple.onclick = function () {
+        changeBgColor("purple");
+      }
+
+      navy.onclick = function () {
+        changeBgColor("navy");
+      }
+
+      maroon.onclick = function () {
+        changeBgColor("maroon");
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Choose your Pokemon</title>
+		<meta charset="UTF-8">
+    <meta name="description" content="This website lets you choose a pokemon in one click!">
+    <meta name="keywords" content="pokemon, choose">
+    <meta name="author" content="Dexielyn Amor C. Halog">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: arial;
+        color: white;
+      }
+      div {
+        background: navy;
+        width: 30%;
+        text-align: center;
+        width: 250px;
+        height: 250px;
+        margin: 0 auto;
+        border: 1px solid black;
+        padding-left: 1px;
+        background: navy;
+      }
+      img {
+        width: 65px;
+        height: 74px;
+        border: 1px solid black;
+        float: left;
+        margin: 1px;
+      }
+      img:first-of-type {
+        /*pertaining to pikachu*/
+        width: 100px;
+        height: 150px;
+        border: 1px solid black;
+        background: lavender;
+        padding-left: 10px;
+        margin-right: 10px;
+      }
+      img:hover {
+        cursor: pointer;
+        background: lavender;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h2>Choose your Pokemon</h2>
+      <img
+        id="avatar"
+        src="https://img.pokemondb.net/sprites/ultra-sun-ultra-moon/normal/pikachu-f.png"
+        title="Pikachu"
+        onclick="cPix(this)"
+      />
+      <img
+        src="https://img.pokemondb.net/sprites/black-white/shiny/ninetales.png"
+        title="Ninetales"
+        onclick="cPix(this)"
+      />
+      <img
+        src="https://img.pokemondb.net/sprites/black-white/normal/dragonite.png"
+        title="Dragonite"
+        onclick="cPix(this)"
+      />
+      <img
+        src="https://img.pokemondb.net/sprites/x-y/normal/ivysaur.png"
+        title="Ivysaur"
+        onclick="cPix(this)"
+      />
+      <img
+        src="https://img.pokemondb.net/sprites/x-y/shiny/wigglytuff.png"
+        title="Wigglytuff"
+        onclick="cPix(this)"
+      />
+    </div>
+
+    <script>
+              /* This function takes the src and titles of the clicked photos */
+             function cPix(pokemonImg) {
+              var onclickSrc = pokemonImg.src;
+              var onclickTitle = pokemonImg.title;
+
+              /*Takes the current avatar of the website*/
+              var currentAvatar = document.getElementById("avatar");
+
+              /*Exchange the current avatar with the clicked photos of pokemon*/
+              currentAvatar.src = onclickSrc;
+              currentAvatar.title = onclickTitle;
+             }
+    </script>
+  </body>
+</html>
