@@ -3,10 +3,10 @@
 	<head>
 		<title>Toss coin</title>
 		<meta charset="UTF-8">
-        <meta name="description" content="The website lets you flip an online coin and compare your guess with the result.">
-        <meta name="keywords" content="flip a coin, coinflip, coin, flip">
-        <meta name="author" content="Dexielyn Amor C. Halog">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        	<meta name="description" content="The website lets you flip an online coin and compare your guess with the result.">
+        	<meta name="keywords" content="flip a coin, coinflip, coin, flip">
+        	<meta name="author" content="Dexielyn Amor C. Halog">
+        	<meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
         	body {background: navy; 
             	text-align: center;
@@ -49,18 +49,18 @@
                 document.getElementById("coin").innerHTML = random;
                 /* This shows the result of the coin flip in the h2 element */
                 if(random == 0){
-					document.getElementById("coin").innerHTML = "H";
+			document.getElementById("coin").innerHTML = "H";
             }
                 if (random == 1){
-				    document.getElementById("coin").innerHTML = "T";
+			document.getElementById("coin").innerHTML = "T";
 			}
                 /* This portion compares the guess of the user versus the actual result of the flipped coin */
-			    if (uGuess == "T" && random == 1 || uGuess == "H" && random == 0){
-				    alert("Tamacanna... sa guess mo! Correct guess :D");
+		if (uGuess == "T" && random == 1 || uGuess == "H" && random == 0){
+			alert("Tamacanna... sa guess mo! Correct guess :D");
 			}
 
-			    else {
-				    alert("Common L, wrong guess x)");
+		else {
+			alert("Common L, wrong guess x)");
 			}
         }
         </script>
