@@ -21,28 +21,28 @@
 <body onload="genOTP()">
 	<h1> Final Verification Step </h1>
 	<h2> Current OTP: <span id="otp"> _ _ _ _ _ _ <span></h2>
-    <h2><a onclick="genOTP()" href=""> New OTP </a> </h2>
-    <button onclick="verOTP()"> Enter the OTP as shown above </button>
-    <script>
-    	/* This function generates the 6 digit OTP for the user, displaying it on the 2nd h2 */
-        function genOTP() {
-        var gotp = Math.floor(Math.random() * 899999 + 100000);
-        document.getElementById("otp").innerHTML = gotp;
-    }
-        function verOTP() {
-            /* Under this function, the votp variable asks the user for their input (random OTP)*/
-            var votp = prompt("Enter the generated OTP: ");
-            var cotp = document.getElementById("otp").innerHTML;
-            /* Using an if-else statement, this verifies whether or not the generated OTP and the user's input is the same. */
-            if (votp == cotp) {
-                window.open("https://www.youtube.com/shorts/rBl9njBjSFE"); /*When the OTP entered is correct, it redirects into this funny link :)*/
-            }
-            /*If the otp is incorrect, the page reloads */
-            else {
-                alert("You entered the wrong OTP. Reloading page");
-                genOTP();
-            }
-        }
-    </script>
+    	<h2><a onclick="genOTP()" href=""> New OTP </a> </h2>
+    	<button onclick="verOTP()"> Enter the OTP as shown above </button>
+    	<script>
+    		/* This function generates the 6 digit OTP for the user, displaying it on the 2nd h2 */
+        	function genOTP() {
+        		var gotp = Math.floor(Math.random() * 899999 + 100000);
+        		document.getElementById("otp").innerHTML = gotp;
+		}
+        	function verOTP() {
+            		/* Under this function, the votp variable asks the user for their input (random OTP)*/
+            		var votp = prompt("Enter the generated OTP: ");
+            		var cotp = document.getElementById("otp").innerHTML;
+            		/* Using an if-else statement, this verifies whether or not the generated OTP and the user's input is the same. */
+            		if (votp == cotp) {
+                		window.open("https://www.youtube.com/shorts/rBl9njBjSFE"); /*When the OTP entered is correct, it redirects into this funny link :)*/
+			}
+            		/*If the otp is incorrect, the page reloads */
+            		else {
+                		alert("You entered the wrong OTP. Reloading page");
+                		genOTP();
+			}
+		}
+    	</script>
 </body>
 </html>
